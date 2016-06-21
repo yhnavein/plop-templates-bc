@@ -7,7 +7,7 @@ let sharedComponentsDir = 'src/app/components/';
 let mainComponentsDir = 'src/app/';
 let componentsIndexFile = 'src/app/components/index.ts';
 let indexModuleFile = 'src/app/index.module.ts';
-const plopTemplates = path.resolve(__dirname, './_plopTemplates/');
+const plopTemplates = path.resolve(__dirname, './templates/');
 
 /** Helper Functions */
 
