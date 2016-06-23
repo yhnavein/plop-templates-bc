@@ -1,6 +1,6 @@
 {
   "name": "plop-templates-bc",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Templates for the plop dedicated for the Angular 1.5 + TypeScript",
   "main": "index.js",
   "scripts": {

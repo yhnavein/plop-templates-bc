@@ -27,9 +27,14 @@ and paste (and adjust) following code:
 ```JS
 'use strict';
 
-const path = require('path');
-
 module.exports = require('plop-templates-bc', {
-  appPath: path.resolve(__dirname, 'YOUR_PATH')
+  sharedComponentsDir: 'src/app/components/',
+  componentsIndexFile: 'src/app/components/index.ts',
+  mainComponentsDir: 'src/app/',
+  indexModuleFile: 'src/app/index.module.ts',
+  routingConfFile: 'src/app/index.route.ts'
 });
+
+// default values provided
+
 ```

@@ -3,11 +3,7 @@
 const path = require('path');
 const fs = require('fs-extra');
 
-let sharedComponentsDir = 'src/app/components/';
-let mainComponentsDir = 'src/app/';
-let componentsIndexFile = 'src/app/components/index.ts';
-let indexModuleFile = 'src/app/index.module.ts';
-let routingConfFile = 'src/app/index.route.ts';
+let sharedComponentsDir, mainComponentsDir, componentsIndexFile, indexModuleFile, routingConfFile;
 const plopTemplates = path.resolve(__dirname, './templates/');
 
 /** Helper Functions */
@@ -96,7 +92,11 @@ function validateName(value, destDir) {
 module.exports = (plop, config) => {
   // Config defaults.
   config = config || {};
-  config.basePath = config.basePath || './';
+  sharedComponentsDir = config.sharedComponentsDir || 'src/app/components/';
+  componentsIndexFile = config.componentsIndexFile || 'src/app/components/index.ts';
+  mainComponentsDir = config.mainComponentsDir || 'src/app/';
+  indexModuleFile = config.indexModuleFile || 'src/app/index.module.ts';
+  routingConfFile = config.routingConfFile || 'src/app/index.route.ts';
 
   plop.setGenerator('Reusable Component', {
     description: 'A new component that you wish to appear in multiple places',
