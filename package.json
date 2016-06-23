@@ -1,18 +1,21 @@
 {
   "name": "plop-templates-bc",
-  "version": "1.0.0",
-  "description": "Templates for plop dedicated for angular 1.5 + typescript",
+  "version": "1.0.1",
+  "description": "Templates for the plop dedicated for the Angular 1.5 + TypeScript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: There are no tests\" && exit 1"
   },
   "repository": {
-  	"type" : "git",
-  	"url" : "git@github.com:yhnavein/plop-templates-bc.git"
+    "type": "git",
+    "url": "git@github.com:yhnavein/plop-templates-bc.git"
   },
   "author": "Piotr Dabrowski @ PureDev",
   "license": "MIT",
   "engines": {
     "node": ">=4.0.0"
+  },
+  "dependencies": {
+    "fs-extra": "^0.30.0"
   }
 }

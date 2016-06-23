@@ -19,7 +19,7 @@ export class {{className}} {
   public static routes($stateProvider: angular.ui.IStateProvider) {
     $stateProvider
       .state('{{fileName}}', {
-        url: '/',
+        url: '/{{fileName}}',
         template: '<{{fileName}} class="container {{cssName}}-container"></{{fileName}}>'
       });
   }
