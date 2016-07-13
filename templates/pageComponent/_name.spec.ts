@@ -8,7 +8,7 @@ describe('{{niceName}}', () => {
     let ctrl: any;
 
     // GlobalConfig.jasmineDeps();
-    beforeEach(angular.mock.module('b2c'));
+    beforeEach(angular.mock.module('{{moduleName}}'));
 
     beforeEach(inject(($componentController: angular.IComponentControllerService) => {
       ctrl = $componentController('{{cssName}}', null, {});
@@ -23,7 +23,7 @@ describe('{{niceName}}', () => {
     let service: {{className}}Service;
 
     // GlobalConfig.jasmineDeps();
-    beforeEach(angular.mock.module('b2c'));
+    beforeEach(angular.mock.module('{{moduleName}}'));
 
     beforeEach(inject(({{className}}Service: {{className}}Service) => {
       service = {{className}}Service;

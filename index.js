@@ -3,7 +3,7 @@
 const path = require('path');
 const fs = require('fs-extra');
 
-let sharedComponentsDir, mainComponentsDir, componentsIndexFile, indexModuleFile, routingConfFile;
+let sharedComponentsDir, mainComponentsDir, componentsIndexFile, indexModuleFile, routingConfFile, moduleName;
 const plopTemplates = path.resolve(__dirname, './templates/');
 
 /** Helper Functions */
@@ -97,6 +97,7 @@ module.exports = (plop, config) => {
   mainComponentsDir = config.mainComponentsDir || 'src/app/';
   indexModuleFile = config.indexModuleFile || 'src/app/index.module.ts';
   routingConfFile = config.routingConfFile || 'src/app/index.route.ts';
+  moduleName = config.moduleName || 'app';
 
   plop.setGenerator('Reusable Component', {
     description: 'A new component that you wish to appear in multiple places',
@@ -179,6 +180,7 @@ module.exports = (plop, config) => {
         const srcDir = path.join(plopTemplates, 'pageComponent');
 
         names.modelName = modelName;
+        names.moduleName = moduleName;
 
         try {
           copyFiles(srcDir, destDir, names.fileName);

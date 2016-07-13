@@ -28,6 +28,7 @@ and paste (and adjust) following code:
 'use strict';
 
 module.exports = require('plop-templates-bc', {
+  moduleName: 'app',
   sharedComponentsDir: 'src/app/components/',
   componentsIndexFile: 'src/app/components/index.ts',
   mainComponentsDir: 'src/app/',
