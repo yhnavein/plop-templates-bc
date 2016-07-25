@@ -10,7 +10,7 @@ export class {{className}}Controller {
   {{/if}}
 
   /* @ngInject */
-  constructor({{className}}Service: {{className}}Service) {
+  constructor(private {{className}}Service: {{className}}Service) {
     this.someArray = {{className}}Service.get();
   }
 }
