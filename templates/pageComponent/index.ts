@@ -20,7 +20,7 @@ export class {{className}} {
     $stateProvider
       .state('{{fileName}}', {
         url: '/{{fileName}}',
-        template: '<{{fileName}} class="container {{cssName}}-container"></{{fileName}}>'
+        template: '<{{fileName}} class="{{cssName}}-container"></{{fileName}}>'
       });
   }
 }
