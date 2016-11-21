@@ -4,7 +4,7 @@ export * from './{{fileName}}.service';
 export * from './{{fileName}}.model';
 {{/if}}
 
-import { GlobalConfig } from '../index.config';
+import { GlobalConfig } from '../../index.config';
 
 import { {{className}}Service } from './{{fileName}}.service';
 import { {{className}}Component } from './{{fileName}}.ctrl';

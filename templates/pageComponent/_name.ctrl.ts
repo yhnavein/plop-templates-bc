@@ -25,7 +25,7 @@ export class {{className}}Component implements ng.IComponentOptions {
   constructor() {
     this.bindings = {};
     this.controller = {{className}}Controller;
-    this.templateUrl = 'app/{{fileName}}/{{fileName}}.html';
+    this.templateUrl = 'app/domain/{{fileName}}/{{fileName}}.html';
     this.controllerAs = 'vm';
   }
 }

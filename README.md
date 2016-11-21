@@ -31,7 +31,7 @@ module.exports = require('plop-templates-bc', {
   moduleName: 'app',
   sharedComponentsDir: 'src/app/components/',
   componentsIndexFile: 'src/app/components/index.ts',
-  mainComponentsDir: 'src/app/',
+  mainComponentsDir: 'src/app/domain/',
   indexModuleFile: 'src/app/index.module.ts',
   routingConfFile: 'src/app/index.route.ts'
 });
