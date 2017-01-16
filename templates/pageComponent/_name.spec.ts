@@ -1,14 +1,13 @@
 // import { {{className}}Controller } from './{{fileName}}.ctrl';
 import { {{className}}Service } from './{{fileName}}.service';
-// import { GlobalConfig } from '../index.config';
+import { GlobalConfig } from '../../index.config';
 
 describe('{{niceName}}', () => {
 
   describe('Component', () => {
     let ctrl: any;
 
-    // GlobalConfig.jasmineDeps();
-    beforeEach(angular.mock.module('{{moduleName}}'));
+    GlobalConfig.jasmineDeps();
 
     beforeEach(inject(($componentController: angular.IComponentControllerService) => {
       ctrl = $componentController('{{cssName}}', null, {});
