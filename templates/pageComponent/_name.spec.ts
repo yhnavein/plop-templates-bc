@@ -1,16 +1,27 @@
-// import { {{className}}Controller } from './{{fileName}}.ctrl';
-import { {{className}}Service } from './{{fileName}}.service';
+import { {{className}}Service, {{className}}Controller } from './';
 import { GlobalConfig } from '../../index.config';
 
 describe('{{niceName}}', () => {
 
   describe('Component', () => {
-    let ctrl: any;
+    let scope: ng.IScope;
+    let ctrl: {{className}}Controller;
+    let _{{className}}Service: {{className}}Service;
 
     GlobalConfig.jasmineDeps();
 
-    beforeEach(inject(($componentController: angular.IComponentControllerService) => {
-      ctrl = $componentController('{{cssName}}', null, {});
+    beforeEach(inject((
+        $componentController: angular.IComponentControllerService,
+        $rootScope: ng.IRootScopeService,
+        {{className}}Service: {{className}}Service
+    ) => {
+      scope = $rootScope.$new();
+      _{{className}}Service = {{className}}Service
+      ctrl = $componentController<{{className}}Controller, any>('{{cssName}}', {
+        $scope: scope,
+        {{className}}Service: _{{className}}Service
+        // other services...
+      }, {});
     }));
 
     it('should pass', () => {
@@ -21,8 +32,7 @@ describe('{{niceName}}', () => {
   describe('Service', () => {
     let service: {{className}}Service;
 
-    // GlobalConfig.jasmineDeps();
-    beforeEach(angular.mock.module('{{moduleName}}'));
+    GlobalConfig.jasmineDeps();
 
     beforeEach(inject(({{className}}Service: {{className}}Service) => {
       service = {{className}}Service;

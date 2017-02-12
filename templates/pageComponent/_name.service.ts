@@ -1,4 +1,10 @@
 export class {{className}}Service {
+
+  /* @ngInject */
+  constructor() {
+
+  }
+
 	public get() : Array<any> {
     return [
       { id: 1, name: 'Poland' },
