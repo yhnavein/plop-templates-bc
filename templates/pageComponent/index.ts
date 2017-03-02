@@ -11,7 +11,7 @@ import { {{className}}Component } from './{{fileName}}.ctrl';
 
 export class {{className}} {
   public static bootstrap() {
-    angular.module(GlobalConfig.moduleName)
+    angular.module(GlobalConfig.ApplicationConfig.moduleName)
       .service('{{className}}Service', {{className}}Service)
       .component('{{cssName}}', new {{className}}Component());
   }

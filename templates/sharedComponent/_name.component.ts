@@ -1,11 +1,8 @@
-/** @ngInject */
 export class {{className}}Controller {
-  public firstName: string;
-  public lastName: string;
 
+  /** @ngInject */
   constructor() {
-    this.firstName = 'Remove';
-    this.lastName = 'Me';
+
   }
 }
 

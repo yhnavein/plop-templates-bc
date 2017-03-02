@@ -4,15 +4,12 @@ import { {{modelName}} } from './{{fileName}}.model';
 {{/if}}
 
 export class {{className}}Controller {
-  public someArray: Array<any>;
-  {{#if modelName}}
-  public selected: {{modelName}};
-  {{/if}}
 
   /* @ngInject */
-  constructor(private {{className}}Service: {{className}}Service) {
-    this.someArray = {{className}}Service.get();
+  constructor(private {{className}}Service: {{className}}Service, private $state: angular.ui.IStateService) {
+
   }
+
 }
 
 export class {{className}}Component implements ng.IComponentOptions {
